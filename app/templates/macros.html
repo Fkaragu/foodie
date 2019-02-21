@@ -1,3 +1,16 @@
+{% macro displayFood(random) %}
+
+{% for recep in random.recipes %}
+<div>
+  <p><strong>{{recep.title}}</strong></p>
+  <a href={{recep.f2f_url}} target="iframe_a">Ingredients</a>
+  <p></p>
+  <hr>
+</div>
+{% endfor %}
+
+{% endmacro %}
+
 {% macro displayComments(my_comments) %}
 {% for comment in my_comments %}
 <hr>
@@ -8,6 +21,7 @@
   <p>{{comment.comment_content}}</p>
 </div>
 {% endfor %} {% endmacro %}
+
 
 {% macro displayComm(my_pitches) %}
 {% for pitch in my_pitches %}
@@ -21,5 +35,4 @@
   </ul>
   <hr>
 </div>
-{% endfor %}
-{% endmacro %}
+{% endfor %} {% endmacro %}

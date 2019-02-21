@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-5">
+    <ul>
+      {{ macro.displayFood(random)}}
+    </ul>
+  </div>
+  <div class="col-md-7">
+    <iframe height="700px" width="100%" name="iframe_a"></iframe>
+  </div>
+
+  {% endblock%}

@@ -9,21 +9,43 @@
 
 {% block content %}
 
-<div class="row">
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    <form>
+        <input type="text" name="food_query" placeholder="Search for a Recipe" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default mvbtn">
+    </form>
+    </div>
+    <div class="col-md-5">
 
-  <div class="col-md-7">
-    <p>APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</p>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+
+    <br>
+    <ul>
+      {{ macro.displayFood(random)}}
+    </ul>
+  </div>
+  <div class="col-md-5">
+
+    <br>
+    <iframe height="700px" width="100%" name="iframe_a"></iframe>
   </div>
 
   <div class="col-md-4">
-    <br>
+
     {{wtf.quick_form(intial_form)}}
     <br>
     {{macro.displayComm(allcom)}}
   </div>
-  <div class="col-md-1">
 
-  </div>
 </div>
 
 {% endblock%}
